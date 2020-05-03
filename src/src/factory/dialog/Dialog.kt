@@ -8,7 +8,7 @@ import factory.dialog.buttons.Button
  * так и любые другие.
  */
 abstract class Dialog{
-    val okButton = createButton()
+    private val okButton = createButton()
 
     fun render(){
         okButton.render()
