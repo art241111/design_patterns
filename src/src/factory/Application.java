@@ -16,6 +16,22 @@ import factory.dialog.WindowsDialog;
  */
 public class Application {
     /**
+     * Задаем config, затем в блоке try/catch создаем кнопку
+     * и вызываем метод для работы с ними (Причем какой тип
+     * кнопки используется нас не волнует)
+     * @param args
+     */
+    public static void main(String[] args){
+        String config = "Windows";
+        try{
+            Dialog dialog = initialize(config);
+            doWithButton(dialog);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * @param config - тип кнопки
      * @return возвращается Dialog со значением кнопки с заданным типом
      * @throws Exception - если такой тип не реализован
@@ -30,21 +46,19 @@ public class Application {
         }
     }
 
-    public static void main(String[] args){
-        String config = "Windows";
-        try{
-            Dialog dialog = initialize(config);
+    /**
+     * Метод, в котором проводится операции с кнопками
+     * (причем не важно какого они типа)
+     * @param dialog - поле, которое определяет кнопку
+     */
+    private static void doWithButton(Dialog dialog){
+        dialog.render();
+        System.out.println();
 
-            dialog.render();
-            System.out.println();
+        dialog.renderAndClick();
+        System.out.println();
 
-            dialog.renderAndClick();
-            System.out.println();
-
-            dialog.onClick();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        dialog.onClick();
     }
 
 }

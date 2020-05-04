@@ -8,8 +8,16 @@ import factory.dialog.buttons.Button
  * так и любые другие.
  */
 abstract class Dialog{
+    /**
+     * Создание кнопки через абстрактный метод,
+     * что позволяет наследникам поменять тип кнопки
+     */
     private val okButton = createButton()
 
+
+    /**
+     * Простые операии, которые могут делать кнопки
+     */
     fun render(){
         okButton.render()
     }
