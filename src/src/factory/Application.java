@@ -19,7 +19,6 @@ public class Application {
      * Задаем config, затем в блоке try/catch создаем кнопку
      * и вызываем метод для работы с ними (Причем какой тип
      * кнопки используется нас не волнует)
-     * @param args
      */
     public static void main(String[] args){
         String config = "Windows";
