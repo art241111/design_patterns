@@ -1,5 +1,8 @@
-package adapter
+package adapter.peg
 
+/**
+ * Круглый колышек
+ */
 open class RoundPeg(){
     private var radius = 1.0
 
