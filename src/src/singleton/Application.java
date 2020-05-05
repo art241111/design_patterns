@@ -10,11 +10,9 @@ public class Application {
      */
     public static void main(String[] args) {
         Database database = Database.getInstance();
-        // sout: 1
-        database.query();
+        database.query(); // 1
 
         Database second_database = Database.getInstance();
-        // sout: 2
-        database.query();
+        database.query(); // 2
     }
 }

@@ -51,13 +51,13 @@ public class Application {
      * @param dialog - поле, которое определяет кнопку
      */
     private static void doWithButton(Dialog dialog){
-        dialog.render();
+        dialog.render(); // Windows button render
         System.out.println();
 
-        dialog.renderAndClick();
+        dialog.renderAndClick(); // Windows button render \n Windows button click
         System.out.println();
 
-        dialog.onClick();
+        dialog.onClick(); // Windows button click
     }
 
 }

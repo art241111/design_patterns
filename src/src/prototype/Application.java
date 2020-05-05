@@ -39,10 +39,10 @@ public class Application {
         List<Shape> shapesCopy = shapes;
 
         System.out.print("Зависит ли код от копируемых объектов: ");
-        System.out.println((shapes.equals(shapesCopy))?"Да":"Нет");
+        System.out.println((shapes.equals(shapesCopy))?"Да":"Нет"); // Да
 
         System.out.print("Равны ли элементы массивов: ");
-        System.out.println((isListEquals(shapes,shapesCopy))?"Да":"Нет");
+        System.out.println((isListEquals(shapes,shapesCopy))?"Да":"Нет"); // Да
     }
 
     /**
@@ -55,10 +55,10 @@ public class Application {
         List<Shape> shapesCopy = copyList(shapes);
 
         System.out.print("Зависит ли код от копируемых объектов: ");
-        System.out.println((shapes.equals(shapesCopy))?"Да":"Нет");
+        System.out.println((shapes.equals(shapesCopy))?"Да":"Нет"); // Нет
 
         System.out.print("Равны ли элементы массивов: ");
-        System.out.println((isListEquals(shapes,shapesCopy))?"Да":"Нет");
+        System.out.println((isListEquals(shapes,shapesCopy))?"Да":"Нет"); // Да
     }
 
 
